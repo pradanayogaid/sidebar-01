@@ -160,11 +160,11 @@ body{
   position: relative;
   left: 250px;
   height: 100vh;
-  width: calc(100%-88px);
+  width: calc(100% - 250px);
   transition: var(--trant-3);
 }
 
 .sidebar.side-min ~ .home{
   left: 88px;
-  width: calc(100%-88px);
+  width: calc(100% - 88px);
 }
