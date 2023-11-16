@@ -104,22 +104,6 @@ body{
   margin-top: -2px;
 }
 
-.sidebar header .toggle{
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 50%;
-  right: -25px;
-  transform: translateY(-50%);
-  width: 25px;
-  height: 25px;
-  background: var(--secondary-color);
-  color: var(--text-primary-color);
-  font-size: 14px;
-  border-radius: 50%;
-}
-
 .sidebar ul{
   padding-left: 0;
   margin-top: 30px;
@@ -156,15 +140,140 @@ body{
   color: var(--text-primary-color);
 }
 
-.home{
+/* ==== content ===== */
+.topMenu{
+  position: fixed;
+  top: 0;
+  left: 250px;
+  height: 65px;
+  width: calc(100% - 250px);
+  background-color: var(--text-primary-color);
+  transition: var(--trant-3);
+  padding: 10px 14px;
+  /* border: 1px solid #000; */
+  z-index: 10;
+}
+.sidebar.side-min ~ .topMenu{
+  left: 88px;
+  width: calc(100% - 88px);
+}
+
+.topMenu .topMenu-content .icon{
+  font-size: 25px;
+  cursor: pointer;
+  /* border: 1px solid #000; */
+}
+
+.topMenu .topMenu-content .active{
+color: var(--secondary-color);
+  /* border: 1px solid #000; */
+}
+.topMenu .topMenu-content .title{
+  margin-top: 5px;
+  margin-left: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  /* border: 1px solid #000; */
+}
+
+.topMenu .topMenu-content .multimedia-icon{
+  margin-right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  /* border: 1px solid #000; */
+}
+
+.content{
   position: relative;
   left: 250px;
   height: 100vh;
   width: calc(100% - 250px);
   transition: var(--trant-3);
+  /* border: 1px solid #000; */
 }
 
-.sidebar.side-min ~ .home{
+.sidebar.side-min ~ .content{
   left: 88px;
   width: calc(100% - 88px);
 }
+
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 250px;
+  height: 65px;
+  width: calc(100% - 250px);
+  background-color: var(--text-primary-color);
+  transition: var(--trant-3);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+}
+.sidebar.side-min ~ footer{
+  left: 88px;
+  width: calc(100% - 88px);
+}
+
+.footer-content{
+  /* border: 1px solid #000; */
+  width: 100%;
+  margin-top: 15px;
+}
+
+.footer-content .left-content p,
+.footer-content .right-content p{
+  font-size: 12px;
+}
+
+.footer-content .left-content a{
+  text-decoration: none;
+  color: #c30505;
+}
+
+.footer-content .right-content a{
+  text-decoration: none;
+  color: var(--sidebar-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============ MOBIL VERSION ============= */
