@@ -420,7 +420,7 @@ display: none;
 .content .header-content{
   margin-left: -250px;
   width: 100%;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 
 .content .tgl .input-group{
@@ -430,7 +430,8 @@ display: none;
 
 .content .content-panel{
   width: 100%;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
+  margin-left: -250px;
 }
 
 .content .panel-K .panel-icon{
