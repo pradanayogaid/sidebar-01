@@ -124,6 +124,10 @@ body{
   background: var(--tinary-color);
 }
 
+.sidebar .side-active{
+  background-color: var(--tinary-color);
+}
+
 .sidebar li a{
   height: 100%;
   width: 100%;
@@ -219,14 +223,64 @@ display: none;
   width: 210px;
 }
 
-.content .panel-K .panel-icon{
-  font-size: 45px;
-  color: #dddddd;
+.content .content-panel{
+  /* border: 1px solid #000; */
+  /* min-height: 400px; */
 }
 
+.content .content-panel .panel-now .panel-icon{
+  font-size: 25px;
+  background-color: var(--sidebar-color);
+  padding: 8px 13px;
+  color: var(--primary-color-light);
+  border-radius: 50px;
+}
+
+.content .content-panel .panel-now .val-now{
+  font-size: 45px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.content .content-panel .panel-now .desc-now{
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: -10px;
+}
+
+.content .content-panel .waterMeter{
+  height: 200px;
+  width: 50px;
+  border: 1px solid #000;
+}
+
+.content .content-panel .cat-data{
+  /* border: 1px solid #000; */
+}
+
+.content .content-panel .hostoris-data{
+  /* border: 1px solid #000; */
+}
+.content .content-panel .graph-data{
+  /* border: 1px solid #000; */
+}
+.content .content-panel .graph-data .card-title{
+  font-size: 18px;
+  font-weight: 700;
+}
+.content .content-panel .graph-data .card-subtitle{
+  font-size: 12px;
+  font-weight: 300;
+}
+
+
+.content .panel-K .panel-icon{
+  font-size: 40px;
+  color: #dddddd;
+}
 .content .panel-K .K-val-now{
   margin-top: 2px;
-  font-size: 2.8rem;
+  font-size: 1.8rem;
 }
 .content .panel-K .K-val-now sub{
   font-size: 1rem;
@@ -245,7 +299,7 @@ display: none;
 
 .content .panel-PH .PH-val-now{
   margin-top: 2px;
-  font-size: 2.8rem;
+  font-size: 1.8rem;
 }
 .content .panel-PH .PH-val-now sub{
   font-size: 1rem;
@@ -256,6 +310,33 @@ display: none;
   font-weight: 300;
   margin-top: -10px;
 }
+
+.content .content-panel .val-avg{
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: -15px;
+}
+.content .content-panel .val-max{
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: -15px;
+}
+.content .content-panel .val-min{
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: -15px;
+}
+
+.content .content-panel .panel-now .ph-icon{
+  font-size: 25px;
+  height: 50px;
+  width: 50px;
+  background: var(--sidebar-color);
+  color: var(--primary-color-light);
+  border-radius: 50px;
+  padding-top: 13px;
+}
+
 
 .sidebar.side-min ~ .content{
   left: 88px;
@@ -323,6 +404,47 @@ footer{
   color: var(--text-secondary-color);
 }
 
+
+
+
+
+
+
+/* ===== Ketinggian Page ===== */
+.content-panel .avg-icon{
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  background: var(--sidebar-color);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color-light);
+  font-size: 25px;
+}
+
+.content-panel .panel-info p{
+  font-size: 12px;
+  font-weight: 300;
+}
+.content-panel .panel-info .K-val-now{
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: -15px;
+}
+.content-panel .panel-info .ins{
+  display: flex;
+  font-size: 12px;
+  justify-content: end;
+  align-items: start;
+}
+.content-panel .panel-info .level-down{
+color: red;
+}
+.content-panel .panel-info .level-up{
+color: rgb(16, 242, 16);
+}
 
 
 
@@ -432,6 +554,11 @@ display: none;
   width: 100%;
   /* border: 1px solid #000; */
   margin-left: -250px;
+  padding-bottom: 20px;
+}
+
+.content .content-panel .cat-data .card{
+  margin-top: 10px;
 }
 
 .content .panel-K .panel-icon{
@@ -491,6 +618,7 @@ display: none;
 
 /* ===== Footer ===== */
 footer{
+  display: none;
   left: 0;
   width: 100%;
   padding: 10px;

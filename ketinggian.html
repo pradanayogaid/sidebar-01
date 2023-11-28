@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard Boot</title>
+    <title>Ketinggian Boot</title>
 
     <!-- ===== css bootstrap ===== -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -35,19 +35,19 @@
       <div class="menu">
         <ul class="menu-links">
           <li class="nav-lik">
-            <a href="#">
+            <a href="index.html">
               <i class="bi bi-collection side-icon"></i>
               <span class="text nav-text">Dashboard</span>
             </a>
           </li>
-          <li class="nav-lik">
-            <a href="#">
+          <li class="nav-lik side-active">
+            <a href="ketinggian.html">
               <i class="bi bi-moisture side-icon" ></i>
               <span class="text nav-text">Ketinggian Air</span>
             </a>
           </li>
           <li class="nav-lik">
-            <a href="#">
+            <a href="ph.html">
               <i class='bx bxs-vial side-icon'></i>
               <span class="text nav-text" style="margin-left: -5px;">PH Air</span>
             </a>
@@ -107,7 +107,7 @@
       <div class="row align-items-center">
         <div class="col-lg-9">
           <h3 class="header-content-title">
-            MONITORING STATISTIK
+            MONITORING KETINGGIAN AIR
           </h3>
           <p>Berikut statistik monitoring pada</p>
         </div>
@@ -120,46 +120,116 @@
       </div>
     </div>
 
-    <div class="content-panel row">
-      <div class="col-lg-6 mt-2">
-        <div class="panel-K">
+    <div class="content-panel row mt-2">
+      <div class="col-lg-2">
+        <div class="panel-now mb-4">
           <div class="card shadow-sm rounded-0 border-light">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6 col-6"><i class="bi bi-moisture panel-icon" ></i></div>
-                <div class="col-lg-3 col-3">
-                  <h4 class="K-val-now">34 <sub>cm</sub></h4>
-                  <p class="K-desc-now">Sekarang</p>
+            <div class="card-body text-center mt-2">
+              <i class='bi bi-moisture panel-icon'></i>
+              <h4 class="val-now">34</h4>
+              <p class="desc-now">flow/s</p>
+              <!-- <canvas id="waterLevel"></canvas> -->
+              <div class="waterMeter"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-10">
+        <div class="row cat-data mb-4">
+          <div class="col-md-4">
+            <div class="card shadow-sm rounded-0 border-light">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-6 col-6">
+                    <div class="avg-icon">
+                      <i class='bi bi-moisture panel-icon'></i>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-6 text-end panel-info">
+                    <p class="category">Rata-rata (flow/s)</p>
+                    <h4 class="val-avg">34</h4>
+                    <div class="ins level-down">
+                      <i class='bx bx-down-arrow-alt mt-1'></i>
+                      <p> 0,12%</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-lg-3 col-3">
-                  <h4 class="K-val-now">34 <sub>cm</sub></h4>
-                  <p class="K-desc-now">Rata-rata</p>
-                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow-sm rounded-0 border-light">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-6 col-6">
+                    <div class="avg-icon">
+                      <i class='bi bi-moisture panel-icon'></i>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-6 text-end panel-info">
+                    <p class="category">Tertinggi (flow/s)</p>
+                    <h4 class="val-max">34</h4>
+                    <div class="ins level-up">
+                      <i class='bx bx-up-arrow-alt mt-1'></i>
+                      <p> 0,12%</p>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow-sm rounded-0 border-light">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-6 col-6">
+                    <div class="avg-icon">
+                      <i class='bi bi-moisture panel-icon'></i>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-6 text-end panel-info">
+                    <p class="category">Terendah (flow/s)</p>
+                    <h4 class="val-min">34</h4>
+                    <div class="ins level-down">
+                      <i class='bx bx-down-arrow-alt mt-1'></i>
+                      <p> 0,12%</p>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row hostoris-data mb-4">
+          <div class="col-md-12">
+            <div class="card shadow-sm rounded-0 border-light">
+              <div class="card-header d-flex justify-content-between">
+                <h6>Data Historis</h6>
+                <i class='bx bx-chevron-up his-icon-down' type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 data-historis"></i>
+              </div>
+              <div class="card-body multi-collapse" id="data-historis">
+                <div class="data-his" style="border: 1px solid #000; height: 80px; width: 100px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row graph-data">
+          <div class="col-md-12">
+            <div class="card shadow-sm rounded-0 border-light">
+              <div class="card-body">
+                <h5 class="card-title">GRAFIK PERUBAHAN KETINGGIAN AIR</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Berikut detail perubahan Ketinggian Air pada : Senin, 27 November 2023
+                </h6>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 mt-2">
-        <div class="panel-PH">
-          <div class="card shadow-sm rounded-0 border-light">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-6 col-6"><i class='bx bxs-vial panel-icon'></i></div>
-                <div class="col-md-3 col-3">
-                  <h4 class="PH-val-now">34 <sub>cm</sub></h4>
-                  <p class="PH-desc-now">Sekarang</p>
-                </div>
-                <div class="col-md-3 col-3">
-                  <h4 class="PH-val-now">34 <sub>cm</sub></h4>
-                  <p class="PH-desc-now">Rata-rata</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
   <footer>
     <div class="footer-content">
@@ -194,13 +264,13 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active fs-5" aria-current="page" href="/" ><i class="bi bi-collection off-icon"></i>Dashboard</a>
+              <a class="nav-link active fs-5" aria-current="page" href="index.html" ><i class="bi bi-collection off-icon"></i>Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5" href="/"><i class="bi bi-moisture off-icon"></i>Ketinggian Air</a>
+              <a class="nav-link fs-5" href="ketinggian.html"><i class="bi bi-moisture off-icon"></i>Ketinggian Air</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5" href="/"><i class='bx bxs-vial off-icon'></i>PH Air</a>
+              <a class="nav-link fs-5" href="ph.html"><i class='bx bxs-vial off-icon'></i>PH Air</a>
             </li>
           </ul>
         </div>
